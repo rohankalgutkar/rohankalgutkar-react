@@ -1,0 +1,30 @@
+@font-face {
+  font-family: MainFont;
+  src: url("./assets/fonts/SourceSansPro-Regular.ttf");
+}
+@font-face {
+  font-family: SectionTitleFont;
+  src: url("./assets/fonts/BebasNeue-Regular.ttf");
+}
+html,
+.mainFont {
+  font-family: MainFont;
+}
+.sectionTitleFont {
+  font-family: SectionTitleFont;
+}
+
+.profile-common {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.profile-img-lg-style {
+  background-position: left;
+}
+.profile-mobile {
+  background-position: top;
+}
+.nav-scrolled {
+  background-color: blue;
+}

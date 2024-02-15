@@ -38,6 +38,7 @@ export default function Socials() {
         <div className='grid grid-cols-2 md:flex md:flex-row md:space-x-4'>
           {socials.map(({ href, title, Icon }) => (
             <a
+              key={title}
               className='pr-5 border-0 md:border-r md:last:border-none flex items-center text-blue-900 hover:underline underline-offset-4'
               href={href}
               target='_blank'>

@@ -72,8 +72,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        "profile-img-lg": "url('src/assets/bg.jpg')",
-        "profile-img-sm": "url('src/assets/cm.jpg')",
+        "profile-img-lg": "url('/bg.jpg')",
+        "profile-img-sm": "url('/cm.jpg')",
       },
     },
   },

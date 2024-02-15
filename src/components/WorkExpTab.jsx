@@ -95,7 +95,6 @@ export default function WorkExpTab() {
                 <ul>
                   {companyDetails[activeCompany].techStack.map(
                     (tech, index) => {
-                      console.log(index);
                       if (index <= 2) {
                         return (
                           <li className='flex items-center' key={tech}>
@@ -110,7 +109,6 @@ export default function WorkExpTab() {
                 <ul>
                   {companyDetails[activeCompany].techStack.map(
                     (tech, index) => {
-                      console.log(index);
                       if (index > 2) {
                         return (
                           <li className='flex items-center' key={tech}>

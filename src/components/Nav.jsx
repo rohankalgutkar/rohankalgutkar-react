@@ -43,7 +43,7 @@ export default function Nav() {
       <nav className='flex float-end py-1'>
         <ul className='mr-12 flex float-end items-center'>
           {navItemArray.map(({ title, href }) => (
-            <li>
+            <li key={title}>
               <Button variant='ghost'>
                 <a href={href}>{title.toUpperCase()}</a>
               </Button>
@@ -51,7 +51,7 @@ export default function Nav() {
           ))}
           <li>
             {socials.map(({ title, href }) => (
-              <Button variant='ghost'>
+              <Button variant='ghost' key={`nav-${href}`}>
                 <a href={href} target='_blank'>
                   {title}
                 </a>

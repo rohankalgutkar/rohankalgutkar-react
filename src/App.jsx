@@ -11,7 +11,7 @@ import tag from "./components/tag.js";
 import { useEffect } from "react";
 function App() {
   useEffect(() => {
-    tag();
+    tag({ eventAction: "pageLoad", eventCode: "landing" });
   }, []);
   return (
     <>

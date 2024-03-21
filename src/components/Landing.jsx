@@ -3,10 +3,11 @@ import { Button } from "../shad/components/ui/button";
 import GetInTouchBtn from "./GetInTouchBtn.jsx";
 import SectionContainer from "./SectionContainer";
 import Resume from "../assets/Rohan_Kalgutkar_Resume.pdf";
+import tag from "./tag.js";
 
 export default function Landing() {
   function handleClickResume() {
-    console.log(`Resume btn click..`);
+    tag({ eventAction: "linkClick", eventCode: "resumeDownload" });
   }
   return (
     <>

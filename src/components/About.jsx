@@ -1,6 +1,7 @@
 import SectionContainer from "./SectionContainer";
 import InnerSection from "./InnerSection";
 import SectionSeparator from "./SectionSeperator";
+import WorkedWith from "./WorkedWith";
 
 export default function About() {
   return (
@@ -17,17 +18,19 @@ export default function About() {
             <i> Node.js, TypeScript, Microservices, and Cloud</i>.
           </p>
           <p>
-            I'm currently based out of Bengaluru and working as a Technical
-            Specialist - Application Development at AT&T. This is a backend web
-            engineering role, where I focus on the development of several
-            analytics APIs used site-wide and related tools.
-          </p>
-          <p>
             Originally from Mumbai, my web development journey started in 2015
             in college itself, where I, along with some friends, started
             freelancing and even won a couple of inter-college competitions.
           </p>
+          <p>
+            I'm currently based out of Bengaluru and working as a Technical
+            Specialist - Application Development at AT&T. This is a backend web
+            engineering role, where I focus on the development of several
+            analytics APIs used site-wide and related tools.{" "}
+          </p>
+          <p>I've worked with these amazing companies –</p>
         </div>
+        <WorkedWith />
       </InnerSection>
       <SectionSeparator />
     </SectionContainer>

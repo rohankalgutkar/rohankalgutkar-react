@@ -1,6 +1,3 @@
-import SectionContainer from "./SectionContainer";
-import SectionSeparator from "./SectionSeperator";
-import InnerSection from "./InnerSection";
 import imgATT from "../assets/att.png";
 import imgAcc from "../assets/accenture.png";
 import imgVis from "../assets/vistaar.png";
@@ -22,21 +19,14 @@ const company = [
 
 export default function WorkedWith() {
   return (
-    <SectionContainer>
-      <InnerSection title="I've Worked With">
-        <div className='grid place-content-center md:flex md:flex-row md:justify-around'>
-          {company.map(({ href, src }) => (
-            <div key={src} className='text-center'>
-              <a href={href}>
-                <img src={src} alt='' className='h-20 justify-self-center' />
-              </a>
-            </div>
-          ))}
+    <div className='mt-5 grid place-content-center md:flex md:flex-row md:justify-around'>
+      {company.map(({ href, src }) => (
+        <div key={src} className='text-center'>
+          <a href={href}>
+            <img src={src} alt='' className='h-20 justify-self-center' />
+          </a>
         </div>
-      </InnerSection>
-      <SectionSeparator />
-    </SectionContainer>
+      ))}
+    </div>
   );
 }
-
-//px-20 flex flex-col place-content-center md:flex-row md:justify-between

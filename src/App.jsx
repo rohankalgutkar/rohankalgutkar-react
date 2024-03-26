@@ -11,7 +11,7 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     sessionStorage.setItem("sid", uuidv4());
-    tag({ eventAction: "pageLoad", eventCode: "landing" });
+    tag({ eventAction: "pageLoad", eventCode: "landing", eventSrc: "landing" });
   }, []);
   return (
     <>

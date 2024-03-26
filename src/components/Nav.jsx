@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "../shad/components/ui/button";
 import { Linkedin, Github } from "lucide-react";
+import tag from "./tag.js";
 
 const navItemArray = [
   {
@@ -17,10 +18,12 @@ const socials = [
   {
     title: <Linkedin className=' h-5 w-5' />,
     href: "https://www.linkedin.com/in/rohankalgutkar/",
+    tagEventCode: "LinkedIn",
   },
   {
     title: <Github className='h-5 w-5' />,
     href: "https://github.com/rohankalgutkar/",
+    tagEventCode: "Github",
   },
 ];
 export default function Nav() {
@@ -35,6 +38,10 @@ export default function Nav() {
   useEffect(() => {
     window.addEventListener("scroll", controlNav);
   });
+
+  function handleButtonClick(tagEventCode) {
+    tag({ eventAction: "linkClick", eventSrc: "nav", eventCode: tagEventCode });
+  }
   return (
     <header
       className={`w-full sticky top-0 flex float-end flex-row justify-end transition-colors ease-in-out duration-400 ${
@@ -50,8 +57,11 @@ export default function Nav() {
             </li>
           ))}
           <li>
-            {socials.map(({ title, href }) => (
-              <Button variant='ghost' key={`nav-${href}`}>
+            {socials.map(({ title, href, tagEventCode }) => (
+              <Button
+                variant='ghost'
+                key={`nav-${href}`}
+                onClick={() => handleButtonClick(tagEventCode)}>
                 <a href={href} target='_blank'>
                   {title}
                 </a>
@@ -61,18 +71,5 @@ export default function Nav() {
         </ul>
       </nav>
     </header>
-    // <header>
-    //   <nav>
-    //     <ul>
-    //       <li>
-    //         <a href='#'>Aeqrwe</a>
-    //       </li>
-
-    //       <li>
-    //         <a href='#'>Basdasd</a>
-    //       </li>
-    //     </ul>
-    //   </nav>
-    // </header>
   );
 }

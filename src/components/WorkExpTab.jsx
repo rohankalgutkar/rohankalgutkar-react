@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../shad/components/ui/accordion";
+import tag from "./tag.js";
 
 const companyNames = ["AT&T", "Accenture", "Vistaar"];
 const companyDetails = {
@@ -23,6 +24,7 @@ const companyDetails = {
       "Jenkins, Docker, K8s",
       "Git/Github",
     ],
+    tagEventCode: "workExAtt",
   },
   Accenture: {
     dates: "Mar 2020 to Jun 2023",
@@ -37,6 +39,7 @@ const companyDetails = {
       "Jenkins, Docker, K8s",
       "Git/Github",
     ],
+    tagEventCode: "workExAccenture",
   },
   Vistaar: {
     dates: "Jul 2016 to Mar 2020",
@@ -44,12 +47,19 @@ const companyDetails = {
     summary:
       "Vistaar Technologies is a leading SaaS pricing optimization and rebate management software provider. I worked in the Solution Delivery Team which created and maintained Pricing Optimization platform for a major Steel Giant in the US. ",
     techStack: ["RhinoJS", "JavaScript", "RESTful API", "SVN", "ExtJS "],
+    tagEventCode: "workExVistaar",
   },
 };
 
 export default function WorkExpTab() {
   const [activeCompany, setActiveCompany] = useState(companyNames[0]);
-
+  function handleButtonClick(tagEventCode) {
+    tag({
+      eventAction: "linkClick",
+      eventSrc: "workEx",
+      eventCode: tagEventCode,
+    });
+  }
   return (
     <>
       <div className='hidden sm:block'>
@@ -63,7 +73,10 @@ export default function WorkExpTab() {
               } hover:decoration-dashed`;
               return (
                 <Button
-                  onClick={() => setActiveCompany(companyName)}
+                  onClick={() => {
+                    handleButtonClick(companyDetails[companyName].tagEventCode);
+                    setActiveCompany(companyName);
+                  }}
                   key={companyName}
                   className={btnClass}
                   variant='link'>

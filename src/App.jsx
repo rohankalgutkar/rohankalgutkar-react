@@ -1,4 +1,4 @@
-//./shad/components/ui/
+import { v4 as uuidv4 } from "uuid";
 import Nav from "./components/Nav";
 import Landing from "./components/Landing";
 import About from "./components/About";
@@ -10,6 +10,7 @@ import tag from "./components/tag.js";
 import { useEffect } from "react";
 function App() {
   useEffect(() => {
+    sessionStorage.setItem("sid", uuidv4());
     tag({ eventAction: "pageLoad", eventCode: "landing" });
   }, []);
   return (

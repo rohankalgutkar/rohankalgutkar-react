@@ -7,7 +7,11 @@ import tag from "./tag.js";
 
 export default function Landing() {
   function handleClickResume() {
-    tag({ eventAction: "linkClick", eventCode: "resumeDownload" });
+    tag({
+      eventAction: "linkClick",
+      eventCode: "resumeDownload",
+      eventSrc: "landing",
+    });
   }
   return (
     <>
@@ -34,7 +38,6 @@ export default function Landing() {
             <a href={Resume} target='_blank'>
               <Button variant='secondary' onClick={handleClickResume}>
                 <FileText className='mr-2 h-4 w-4' /> Resume
-                {/* Resume</a> */}
               </Button>
             </a>
           </div>

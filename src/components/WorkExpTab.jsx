@@ -148,6 +148,7 @@ export default function WorkExpTab() {
               <AccordionTrigger
                 className={`text-primary text-xl underline-offset-4 decoration-dashed`}>
                 {company}
+                {/* !TODO add event listener here */}
               </AccordionTrigger>
               <AccordionContent>
                 <div className=''>

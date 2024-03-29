@@ -6,7 +6,7 @@ export default function tag(event) {
   const ua = navigator.userAgentData || "";
 
   const tagBody = { ...event, origin, timestamp, docReferrer, sid, ua };
-  fetch("https://poc-analytics-production.up.railway.app/tag", {
+  fetch("https://rk-analytics-dashboard.up.railway.app/tag", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

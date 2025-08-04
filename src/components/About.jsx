@@ -9,13 +9,7 @@ export default function About() {
       <InnerSection title='About'>
         <div className='space-y-5 text-lg'>
           <p>
-            My name is Rohan Kalgutkar. I am a highly motivated Backend Web
-            Developer with 7+ years of professional experience crafting
-            high-performance, scalable applications. I thrive in an agile
-            development environment and work seamlessly with cross-functional
-            teams to translate business requirements into robust, user-centric
-            solutions. My expertise lies in
-            <i> Node.js, TypeScript, Microservices, and Cloud</i>.
+            My name is Rohan Kalgutkar. I am a full stack software engineer with 9 years of experience delivering scalable, high-impact digital solutions for global businesses in analytics, telecom, and SaaS domains. I specialize in building robust backend microservices with <i>Node.js and TypeScript</i>, as well as dynamic, user-focused frontend applications using <i>React and Next.js</i>.
           </p>
           <p>
             Originally from Mumbai, my web development journey started in 2015
@@ -23,8 +17,7 @@ export default function About() {
             freelancing and even won a couple of inter-college competitions.
           </p>
           <p>
-            I'm currently based out of Bengaluru and working as a Technical
-            Specialist - Application Development at AT&T. This is a backend web
+            I'm currently based out of Bengaluru and working as a Specialist Software Engineer at AT&T. This is a backend web
             engineering role, where I focus on the development of several
             analytics APIs used site-wide and related tools.{" "}
           </p>

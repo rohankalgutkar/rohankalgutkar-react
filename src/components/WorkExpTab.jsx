@@ -13,13 +13,14 @@ const companyNames = ["AT&T", "Accenture", "Vistaar"];
 const companyDetails = {
   "AT&T": {
     dates: "June 2023 to Present",
-    roleTitle: "Technical Specialist – Application Development",
+    roleTitle: "Specialist Software Engineer",
     summary:
       "AT&T is a leading telecommunications, technology and entertainment company in the US. I work in the Analytics Product team, where we own a cluser of microservices that manage, govern and process the clickstream data of the user journey across web, native apps and multiple other channels.",
     techStack: [
       "Node.js - TypeScript",
+      "React, Next.js",
       "Microservices",
-      "Azure",
+      "Azure Cloud",
       "Jest",
       "Jenkins, Docker, K8s",
       "Git/Github",
@@ -34,7 +35,7 @@ const companyDetails = {
     techStack: [
       "Node.js - TypeScript",
       "Microservices",
-      "Azure",
+      "Azure Cloud",
       "Jest",
       "Jenkins, Docker, K8s",
       "Git/Github",
@@ -66,11 +67,10 @@ export default function WorkExpTab() {
         <div className='grid grid-cols-10 gap-14'>
           <div className='col-span-2 flex flex-col gap-1'>
             {companyNames.map((companyName) => {
-              const btnClass = `mainFont justify-end text-xl ${
-                companyName == activeCompany
-                  ? "underline decoration-dashed"
-                  : undefined
-              } hover:decoration-dashed`;
+              const btnClass = `mainFont justify-end text-xl ${companyName == activeCompany
+                ? "underline decoration-dashed"
+                : undefined
+                } hover:decoration-dashed`;
               return (
                 <Button
                   onClick={() => {
@@ -185,7 +185,7 @@ export default function WorkExpTab() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
+      </div >
     </>
   );
 }

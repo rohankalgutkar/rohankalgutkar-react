@@ -23,14 +23,14 @@ export default function Landing() {
             <h3 className='text-xl md:text-2xl lg:text-3xl font-mono'>
               Hey there, I'm
             </h3>
-            <h1 className='text-5xl md:text-7xl lg:text-8xl sectionTitleFont'>
+            <h1 className='text-6xl md:text-7xl lg:text-9xl sectionTitleFont'>
               Rohan Kalgutkar
             </h1>
             <h3 className='md:text-lg lg:text-xl font-mono'>
-              Software Engineer - Web Developer
-              <span className='sm:inline md:hidden lg:inline'> | </span>
+              Full Stack Developer (Node.js/React/TypeScript) <p>Cloud & Microservices</p>
+              {/* <span className='sm:inline md:hidden lg:inline'> | </span> */}
               <br className='hidden md:inline lg:hidden' />
-              AT&T, India
+              AT&T, Bangalore (India)
             </h3>
           </div>
           <div className='space-x-5'>

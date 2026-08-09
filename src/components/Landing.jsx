@@ -21,13 +21,13 @@ export default function Landing() {
         <div className='space-y-8 py-10 md:py-40 lg:py-60 '>
           <div className='space-y-1'>
             <h3 className='text-xl md:text-2xl lg:text-3xl font-mono'>
-              Hey there, I'm
+              Hey there, I&apos;m
             </h3>
             <h1 className='text-6xl md:text-7xl lg:text-9xl sectionTitleFont'>
               Rohan Kalgutkar
             </h1>
             <h3 className='md:text-lg lg:text-xl font-mono'>
-              Full Stack Developer (Node.js/React/TypeScript) <p>Cloud & Microservices</p>
+              Senior Full-Stack Software Engineer <p>Node.js, React, TypeScript, Cloud & Microservices</p>
               {/* <span className='sm:inline md:hidden lg:inline'> | </span> */}
               <br className='hidden md:inline lg:hidden' />
               AT&T, Bangalore (India)
@@ -35,7 +35,7 @@ export default function Landing() {
           </div>
           <div className='space-x-5'>
             <GetInTouchBtn />
-            <a href={Resume} target='_blank'>
+            <a href={Resume} target='_blank' rel='noreferrer'>
               <Button variant='secondary' onClick={handleClickResume}>
                 <FileText className='mr-2 h-4 w-4' /> Resume
               </Button>
